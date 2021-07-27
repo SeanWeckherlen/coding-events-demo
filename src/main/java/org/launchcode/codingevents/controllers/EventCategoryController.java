@@ -17,7 +17,7 @@ import javax.validation.Valid;
  * Created by Chris Bay
  */
 @Controller
-@RequestMapping("eventCategories")
+@RequestMapping("/eventCategories")
 public class EventCategoryController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class EventCategoryController {
         return "eventCategories/index";
     }
 
-    @GetMapping("create")
+    @GetMapping("/create")
     public String renderCreateEventCategoryForm(Model model) {
         model.addAttribute("title", "Create Category");
         model.addAttribute(new EventCategory());
